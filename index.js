@@ -1,6 +1,7 @@
 let horas = 8;
 let minutos = 0;
 let segundos = 0;
+let dias = 4;
 cargarSegundos();
 
 function cargarSegundos(){
@@ -62,6 +63,27 @@ function cargarHoras(segundos,minutos){
         txtHoras = horas;
     }
     document.getElementById('horas').innerHTML = txtHoras;
+    cargarDias(segundos,minutos,horas);
 }
 
+function cargarDias(segundos,minutos,horas){
+    let txtDias;
+
+    if(segundos == -1 && minutos == 0 && horas == 0 && dias != 0){
+        setTimeout(() => {
+            dias --;
+        },500)
+    }else if(segundos == -1 && minutos == 0 && horas == 0 && dias == 0){
+        setTimeout(() => {
+            dias = 24;
+        },500)
+    }
+
+    if(dias < 10){
+        txtDias = ('0'+dias);
+    }else{
+        txtDias = dias;
+    }
+    document.getElementById('dias').innerHTML = txtDias;
+}
 setInterval(cargarSegundos, 1000);
