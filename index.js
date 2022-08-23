@@ -57,7 +57,7 @@ function cargarHoras(segundos,minutos){
     }
 
     if(horas < 10){
-        txtHoras = 0&(horas);
+        txtHoras = ('0'+horas);
     }else{
         txtHoras = horas;
     }
