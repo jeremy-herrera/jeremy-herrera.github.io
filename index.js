@@ -1,4 +1,4 @@
-let horas = 7;
+let horas = 8;
 let minutos = 0;
 let segundos = 0;
 cargarSegundos();
@@ -11,7 +11,7 @@ function cargarSegundos(){
     }
 
     if(segundos < 10){
-        txtSegundos = 0&(segundos);
+        txtSegundos = ('0'+segundos);
     }else{
         txtSegundos = segundos;
     }
@@ -35,7 +35,7 @@ function cargarMinutos(segundos){
     }
 
     if(minutos < 10){
-        txtMinutos = 0&(minutos);
+        txtMinutos = ('0'+minutos);
     }else{
         txtMinutos = minutos;
     }
